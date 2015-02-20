@@ -1,0 +1,15 @@
+[submodule "src/LayeredForms"]
+	path = src/LayeredForms
+	url = https://github.com/mohamedkomalo/LayeredForms
+[submodule "WinApiWrappers"]
+	path = WinApiWrappers
+	url = https://github.com/mohamedkomalo/WinApiWrappers
+[submodule "WindowsHook"]
+	path = WindowsHook
+	url = https://github.com/mohamedkomalo/WindowsHook
+[submodule "src/WinApiWrappers"]
+	path = src/WinApiWrappers
+	url = https://github.com/mohamedkomalo/WinApiWrappers
+[submodule "src/WindowsHook"]
+	path = src/WindowsHook
+	url = https://github.com/mohamedkomalo/WindowsHook

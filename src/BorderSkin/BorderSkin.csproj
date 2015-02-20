@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7022C218-BBC8-4E96-B20A-723E9FFC4DBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>BorderSkin</RootNamespace>
+    <AssemblyName>BorderSkin</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Resources\BorderSkinIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningLevel>3</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.IO" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BorderSkinning\DefaultNewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\Explorer\Forms\LayeredButtonWithSkinElement.cs" />
+    <Compile Include="BorderSkinning\Forms\CloseButton.cs" />
+    <Compile Include="BorderSkinning\Forms\MaximizeButton.cs" />
+    <Compile Include="BorderSkinning\Forms\HelpButton.cs" />
+    <Compile Include="BorderSkinning\Forms\MinimizeButton.cs" />
+    <Compile Include="BorderSkinning\Forms\WindowFunctions.cs" />
+    <Compile Include="ErrorHandling\ErrorDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorHandling\ErrorDialogue.Designer.cs">
+      <DependentUpon>ErrorDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Execlusion\ExclusionNewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\Explorer\ExplorerNewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\Explorer\Forms\ExplorerSettingsUpdateHandler.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\BorderSkinningManagerSettingsUpdater.cs" />
+    <Compile Include="BorderSkinning\Handlers\ExplorerSkinWndowControlsHandler.cs" />
+    <Compile Include="BorderSkinning\Handlers\LayeredControlsChangeHandler.cs" />
+    <Compile Include="BorderSkinning\Handlers\SkinWindowControlsChangeHandler.cs" />
+    <Compile Include="BorderSkinning\Handlers\WindowEventHandler.cs" />
+    <Compile Include="BorderSkinning\Handlers\ProcessExitHandler.cs" />
+    <Compile Include="BorderSkinning\Handlers\SettingsUpdater.cs" />
+    <Compile Include="BorderSkinning\Forms\SkinBorder.Designer.cs">
+      <DependentUpon>SkinBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorderSkinning\Forms\SkinBorder.cs" />
+    <Compile Include="Execlusion\InclusionNewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\INewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\PreventShutdownSkinningNewWindowHandler.cs" />
+    <Compile Include="BorderSkinning\BorderSkinningManager.cs" />
+    <Compile Include="BorderSkinning\SkinableWindowBorder.cs" />
+    <Compile Include="BorderSkinning\Handlers\SkinWindowButtonsHandler.cs" />
+    <Compile Include="BorderSkinning\Skin\ColorScheme.cs" />
+    <Compile Include="BorderSkinning\Skin\IWindowBorderSkinLoader.cs" />
+    <Compile Include="BorderSkinning\Skin\WindowBorderSkin.cs" />
+    <Compile Include="BorderSkinning\Skin\SkinConstants.cs" />
+    <Compile Include="BorderSkinning\Skin\SkinElement.cs" />
+    <Compile Include="BorderSkinning\Skin\Ini\SkinIniLoader.cs" />
+    <Compile Include="BorderSkinning\Skin\WindowBorderSkinProvider.cs" />
+    <Compile Include="BorderSkinning\Skin\TrueTransparency\TrueTransparencySkinIDs.cs" />
+    <Compile Include="BorderSkinning\Explorer\Forms\LayeredBreadcrumbs.cs" />
+    <Compile Include="BorderSkinning\Explorer\Forms\SkinList.cs" />
+    <Compile Include="BorderSkinning\Explorer\ExplorerWindows.cs" />
+    <Compile Include="BorderSkinning\Explorer\Forms\ExplorerSkinWindow.cs" />
+    <Compile Include="BorderSkinning\Explorer\Skin\Constants.cs" />
+    <Compile Include="BorderSkinning\Explorer\Skin\ExplorerSkin.cs" />
+    <Compile Include="ErrorHandling\ErrorManager.cs" />
+    <Compile Include="Execlusion\ExclusionDialogue.Designer.cs">
+      <DependentUpon>ExclusionDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Execlusion\ExclusionDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Execlusion\ExclusionManagerControl.Designer.cs">
+      <DependentUpon>ExclusionManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Execlusion\ExclusionManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Execlusion\ExecludedWindow.cs" />
+    <Compile Include="Execlusion\ExecludeList.cs" />
+    <Compile Include="Language\LanguageFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\IconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="Settings\SettingsDialogue.Designer.cs">
+      <DependentUpon>SettingsDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\ExtendedFileInfo.cs" />
+    <Compile Include="Utilities\InfoFile.cs" />
+    <Compile Include="Utilities\IniFile.cs" />
+    <Compile Include="Utilities\ShellClassID.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BorderSkinning\Forms\SkinBorder.resx">
+      <DependentUpon>SkinBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorHandling\ErrorDialogue.resx">
+      <DependentUpon>ErrorDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Execlusion\ExclusionDialogue.resx">
+      <DependentUpon>ExclusionDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Execlusion\ExclusionManagerControl.resx">
+      <DependentUpon>ExclusionManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsDialogue.resx">
+      <DependentUpon>SettingsDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddImage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CancelImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitAppImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OKImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveAllImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BorderSkinIcon.ico" />
+    <None Include="Resources\BorderSkinImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LayeredForms\src\LayeredForms.csproj">
+      <Project>{a2ed056f-a0c7-4b9d-ac2f-ee3ea1981e41}</Project>
+      <Name>LayeredForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinApiWrappers\src\WinApiWrappers.csproj">
+      <Project>{60188886-9116-4aac-9ec6-74b9d9c46df9}</Project>
+      <Name>WinApiWrappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowsHook\src\WindowsHook\WindowsHook.csproj">
+      <Project>{f4d313ea-98bc-4f25-a7c9-9bcfc5291230}</Project>
+      <Name>WindowsHook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)\Resources\InAppResources\*.*" "$(TargetDir)" /Y /D /E</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
