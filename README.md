@@ -1,35 +1,21 @@
-# GlassX
+# GlassXI
 
-GlassX is a free portable software to skin the windows borders by skins composed of png images with the support of several features like Blur, Reflection and Aero Explorer, it supports Windows XP/Vista/7/8.
+GlassXI is a free portable software that aims to bring back elements of the Aero design from Windows Vista & 7 such as reflective materials and background blurs.
 
 # Getting Started
 You will need Visual Studio to work with the project, I use Visual Studio 2013 but I think previous versions can work too.
 That's it, just open solution and build it
 
 # Project History
-GlassX was originally written in [AutoIt] but never release in this language, then it was converted into VB.NET until 0.2.9, then from 0.3 it was converted into C# and some functionality were extracted as separate libraries ([LayeredForms], [WindowsHook], [WinApiWrappers])
-
-# New Goal
-The original purpose of GlassX was to simulate aero interface on windows xp. however with the upcoming release of windows 10, this doesn't really have much value anymore, so there must be a new vision to work towards to.
-
-One of the top features that distinguished GlassX was Aero Explorer, because it added real the vista explorer controls like breadcrumbs on the borders of XP explorer windows. 
-
-However, the real power of this feature wasn't just the vista controls, but the ability of creating custom controls and put them on the windows borders.
-
-So the new goal is to provide the ability through plugins to create custom controls to be added on windows borders, whether these controls was to specific window type (like explorer) or for all windows.
-
-Of course the normal features like blur are still maintained.
-
-If you have an idea (even if it was a small one) of what GlassX goal can be, please don't hesitate to discuss it in the [GOAL issue] or send me by email.
+GlassXI was originally developed by Mohamed Kamaly. I discovered this project while searching for a way to get Aero Glass back in Windows 10 and decided that since it was long-since abandoned, to take up the project and try to revive it myself.
 
 # Contributing
 * Consider contributing to [LayeredForms], [WindowsHook], [WinApiWrappers]
 * Create a new issue to report a bug or suggest a feature
 * Checkout the opened issues, if you decided to work on an issue, please comment.
 
-
 # License
-GlassX project is released under MIT license, other projects used are released under their own license.
+GlassXI project is released under MIT license, other projects used are released under their own license.
 
 [LayeredForms]:https://github.com/mohamedkomalo/LayeredForms
 
